@@ -7,10 +7,10 @@ import (
 
 // The content of a KRPC request UDP packet.
 type QueryPacket struct {
-	Args        map[string]interface{} "a"
-	QueryMethod string                 "q"
-	PacketType  string                 "y"
-	Transaction string                 "t"
+	Args        map[string]interface{} `bencode:"a"`
+	QueryMethod string                 `bencode:"q"`
+	PacketType  string                 `bencode:"y"`
+	Transaction string                 `bencode:"t"`
 }
 
 type IncomingQueryPacket struct {
