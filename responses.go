@@ -6,9 +6,9 @@ import (
 
 // The content of an RPC reponse UDP packet
 type ReplyPacket struct {
-	NamedReturns map[string]interface{} "r"
-	PacketType   string                 "y"
-	Transaction  string                 "t"
+	NamedReturns map[string]interface{} `bencode:"r"`
+	PacketType   string                 `bencode:"y"`
+	Transaction  string                 `bencode:"t"`
 }
 
 type IncomingReplyPacket struct {
