@@ -19,7 +19,7 @@ type IncomingReplyPacket struct {
 func NewReplyPacket(transaction string, args map[string]interface{}) *ReplyPacket {
 	return &ReplyPacket{
 		NamedReturns: args,
-		PacketType:   "r",
+		PacketType:   krpcReply,
 		Transaction:  transaction,
 	}
 }
